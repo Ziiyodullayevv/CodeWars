@@ -228,6 +228,77 @@ function evenOrOdd(number) {
     return number % 2 ? "Odd" : "Even"
 }
 
-console.log(evenOrOdd(8));
+//console.log(evenOrOdd(8));
 
+// 11 - KATA:
+// Trolllar sizning sharhlar bo'limingizga hujum qilmoqda!
+// Ushbu vaziyatni hal qilishning keng tarqalgan usuli - trollarning izohlaridan barcha unli tovushlarni olib tashlash, tahdidni zararsizlantirish.
 
+// Sizning vazifangiz satrni oladigan funktsiyani yozish va barcha unlilar olib tashlangan yangi qatorni qaytarishdir.
+
+// OUTPUT:
+// For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+
+// YECHIM:
+
+// 1 - USUL:
+const vowels = 'aeiou';
+
+function disemvowel(str) {
+  return str
+    .split('')
+    .filter(letter => !vowels.includes(letter.toLowerCase()))
+    .join('');
+}
+//console.log(disemvowel('Hello world LOL'));
+
+// 2 - USUL:
+function disemvowel(str) {
+  return str.replace(/[auieo]/gi, '');
+}
+//console.log(disemvowel('Hello world LOL'));
+
+// 12 - KATA:
+// Sizning vazifangiz har qanday manfiy bo'lmagan butun sonni argument sifatida qabul qiladigan va uni raqamlari bilan kamayish tartibida qaytara oladigan funktsiyani yaratishdir. Asosan, mumkin bo'lgan eng yuqori raqamni yaratish uchun raqamlarni o'zgartiring.
+
+// OUTPUT:
+// Kirish: 42145 Chiqish:54421
+
+// Kirish: 145263 Chiqish:654321
+
+// Kirish: 123456789 Chiqish:987654321
+
+function descendingOrder(n){
+   return parseInt(n.toString().split('').sort((a, b) => b - a).join(''));
+}
+
+//console.log(descendingOrder(15));
+
+// 13 - KATA:
+// Raqamlar qatorini hisobga olgan holda, 5 dan past bo'lgan har qanday raqamni "0" bilan, 5 va undan yuqori raqamlarni esa "1" bilan almashtirishingiz kerak. Olingan qatorni qaytaring.
+
+// OUTPUT:
+// '1245' -> '0001'
+
+// YECHIM:
+
+function fakeBin(x){
+    return x.split('').map(n => n < 5 ? 0 : 1).join('');
+}
+//console.log(fakeBin('1234567890'));
+
+// 14 - KATA:
+
+// Berilgan qatordagi unlilar sonini (hisobini) qaytaring.
+
+// OUTPUT:
+//'abcafde' -> 3
+
+// YECHIM:
+
+function getCount(str) {
+    let vowels = ['a','o','e','i','u'];
+    return str.split('').filter((a) => vowels.includes(a)).length;
+}
+
+//console.log(getCount('abaco'));

@@ -302,3 +302,180 @@ function getCount(str) {
 }
 
 //console.log(getCount('abaco'));
+
+// 15 - KATA:
+// Tasodifiy manfiy bo'lmagan raqam berilgan bo'lsa, siz ushbu raqamning raqamlarini massivdagi teskari tartibda qaytarishingiz kerak.
+
+// OUTPUT:
+// 35231 -> [1,3,2,5,3];
+// 0 -> [0];
+
+// YECHIM:
+function digitize(n) {
+    return String(n).split('').map(a => parseInt(a).reverse())
+}
+//console.log(digitize(2345));
+
+// 16 - KATA:
+// Funksiyaga son kiritilgand quyidagi natija chiqsin: misol 3 kiritsak
+// "1 sheep...2 sheep...3 sheep...";
+
+var countSheep = function (num){
+    let str = '';
+    for (let i = 1; i <= num; i++) {
+       str += `${i} sheep...`
+    }
+    return str
+}
+ //console.log(countSheep(2));
+
+// 17 - KATA:
+// Oy 1 dan 12 gacha butun son sifatida berilgan bo'lsa, u butun son sifatida yilning qaysi choragiga tegishli ekanligini qaytaring.
+
+// OUTPUT:
+// quarterOf(3),  --> 1
+// quarterOf(8), --> 3
+// quarterOf(11), --> 4
+
+// YECHIM:
+ 
+// 1 - USUL:
+const quarterOf = (month) => {
+    if (month <= 3) {
+      return 1
+    } else if (month <= 6) {
+      return 2
+    } else if (month <= 9) {
+      return 3
+    } else if (month <= 12) {
+      return 4
+    } 
+}
+//console.log(quarterOf(3));
+
+// 2 - USUL:
+//const quarterOf = month => Math.ceil(month / 3);
+//console.log(quarterOf(3));
+
+
+// 18 - KATA:
+// "String"      -> "SSttrriinngg"
+// "Hello World" -> "HHeelllloo  WWoorrlldd"
+// "1234!_ "     -> "11223344!!__  "
+
+// YECHIM:
+
+// 1 - USUL:
+function doubleChar(str) {
+  let word = '';
+  for(let i = 0; i < str.length; i++) {
+    word += str[i] + str[i]
+  }
+  return word;
+}
+//console.log(doubleChar('String'));
+
+// 2 - USUL:
+//const doubleChar = (str) => str.split("").map(c => c + c).join("");
+// console.log(doubleChar('String'));
+
+// 19 - KATA:
+// Write function bmi that calculates body mass index (bmi = weight / height2).
+
+//OUTPUT:
+//if bmi <= 18.5 return "Underweight"
+//if bmi <= 25.0 return "Normal"
+//if bmi <= 30.0 return "Overweight"
+//if bmi > 30 return "Obese"
+
+// YECHIM:
+function bmi(weight, height) {
+    let bmi = weight / Math.pow(height, 2)
+    if (bmi <= 18.5) return 'Underweight';
+    else if (bmi <= 25.0) return 'Normal';
+    else if (bmi <= 30.0) return 'Overweight';
+    else  return 'Obese'
+}
+//console.log(bmi(57, 1.76));
+
+// 19 - KATA:
+// 1 dan 9 gacha bolgan sonlarni raqam emas balki string korinishidagi yani: misol 1 --> 'One' tarzida chiqaruvchi function yozing?
+
+// YECHIM:
+
+function switchItUp(number){
+    let words = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
+    return words[number];
+};
+
+console.log(switchItUp(8));
+
+// 20 - KATA:
+// Qahramon o'z vazifasini bajarish uchun qasrga ketmoqda. Biroq, unga qasr bir nechta kuchli ajdarlar bilan o'ralganligini aytishdi! Har bir ajdaho mag'lub bo'lish uchun 2 ta o'q oladi, bizning qahramonimiz qancha o'q olib yurishi kerakligini bilmaydi. Agar u ma'lum miqdordagi o'qlarni ushlab, boshqa ma'lum miqdordagi ajdarlar bilan jang qilish uchun oldinga siljiydi deb faraz qilsak, u omon qoladimi?
+
+// Ha bo'lsa True, aks holda False qaytaring :)
+
+// OUTPUT:
+// hero(10, 5), true
+// hero(7, 4), false
+// hero(4, 5), false
+// hero(100, 40), true
+// hero(1500, 751), false
+// hero(0, 1), false
+
+// YECHIM:
+function hero(bullets, dragons){
+  return bullets >= dragons * 2
+}
+// console.log((hero(4, 2)));
+
+//===================================== CODEWARS KATA =======================================//
+//========================================= 7 KYU ===========================================//
+
+// 1 - KATA:
+// Satr parametrini qabul qiluvchi va satrdagi har bir so‘zni teskari aylantiruvchi funksiyani bajaring. Satrdagi barcha bo'shliqlar saqlanishi kerak.
+
+// OUTPUT:
+// "This is an example!" --> "sihT si na !elpmaxe"
+// "double  spaces"      --> "elbuod  secaps"
+
+// YECHIM:
+
+// 1 - USUL:
+function reverseWords(str) {
+    return str.split("").reverse().join("").split(" ").reverse().join(" ");
+}
+//console.log(reverseWords('Hello world'));
+
+// 2 - USUL:
+function reverseWords(str) {
+    return str.split(' ').map(value => value.split('').reverse().join('')).join(' ');
+}
+//console.log(reverseWords('Hello world'));
+
+// 2 - KATA:
+// tosh qogoz qaychi uyinini yarating;
+
+
+// YECHIM:
+const rps = (p1, p2) => {
+    let rules = {rock: "scissors", paper: "rock", scissors: "paper"};
+    if (p1 === p2) return 'Drow!'
+    else if (p2 === rules[p1]) return "Player 1 won!";
+    else  return "Player 2 won!";
+};
+//console.log(rps('paper', 'rock'));
+
+
+// 3 - KATA:
+// Hamma hayvonlar bayram qilishmoqda! Har bir hayvon bitta idish olib keladi. Faqat bitta qoida bor: taom hayvon nomi bilan bir xil harflar bilan boshlanishi va tugashi kerak.
+  
+// OUTPUT:
+// feast("great blue heron", "garlic naan"), true)
+// feast("chickadee", "chocolate cake"), true)
+// feast("brown bear", "bear claw"), false)
+
+function feast(beast, dish) {
+    return beast[0] === dish[0] && beast.slice(-1) === dish.slice(-1);
+}
+//console.log("great blue heron", "garlic naan");

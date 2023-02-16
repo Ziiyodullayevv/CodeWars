@@ -1,7 +1,6 @@
 //===================================== CODEWARS KATA =====================================//
 //========================================= KYU 8 =========================================//
 
-
 // 1 - KATA: 
 // (N) SON BERILGAN FUNKSIYA ORQALI (N)SONDAN  1 GACHA BOLGAN SONLARNI MASSIVDA QAYTARING?
 // OUTPUT: N = 5;  [5, 4, 3, 2, 1];
@@ -408,7 +407,7 @@ function switchItUp(number){
     return words[number];
 };
 
-console.log(switchItUp(8));
+//console.log(switchItUp(8));
 
 // 20 - KATA:
 // Qahramon o'z vazifasini bajarish uchun qasrga ketmoqda. Biroq, unga qasr bir nechta kuchli ajdarlar bilan o'ralganligini aytishdi! Har bir ajdaho mag'lub bo'lish uchun 2 ta o'q oladi, bizning qahramonimiz qancha o'q olib yurishi kerakligini bilmaydi. Agar u ma'lum miqdordagi o'qlarni ushlab, boshqa ma'lum miqdordagi ajdarlar bilan jang qilish uchun oldinga siljiydi deb faraz qilsak, u omon qoladimi?
@@ -429,6 +428,74 @@ function hero(bullets, dragons){
 }
 // console.log((hero(4, 2)));
 
+// 21 - KATA:
+// (n) Butun son va satrni parametr sifatida qabul qiladigan va (s) aynan takrorlangan qatorini qaytaradigan funksiya yozing 
+
+// OUTPUT:
+// 6, "I"     -> "IIIIII"
+// 5, "Hello" -> "HelloHelloHelloHelloHello"
+
+// YECHIM:
+
+// 1 - USUL:
+function repeatStr (n, s) {
+  let arr = []
+  for (let i = 1; i <= n; i++) {
+    arr.push(s)
+  }
+  return arr.join('')
+}
+//console.log(repeatStr(5, 'hello'));
+
+// 2 - USUL:
+function repeatStr (n, s) {
+  return s.repeat(n);
+}
+
+//console.log(repeatStr(5, 'hello'));
+
+// 22 - KATA:
+// 2 ta argumentni qabul qiladigan va birinchisida 2-argument topilgan takrorlanishlar sonining butun sonini qaytaradigan funksiya yarating.
+
+//Hech qanday hodisa topilmasa, 0 soni qaytarilishi kerak.
+
+// OUTPUT:
+// ("Hello", "o")  ==>  1
+// ("Hello", "l")  ==>  2
+// ("", "z")       ==>  0;
+
+// 23 - KATA:
+// Belgilarni aniqlash dasturi bosma matnlarni raqamlashtirish uchun keng qo'llaniladi. Shunday qilib, matnlarni kompyuterda tahrirlash, qidirish va saqlash mumkin.
+
+// Hujjatlar (ayniqsa yozuv mashinkasida yozilgan juda eski hujjatlar) raqamlashtirilganda belgilarni aniqlash dasturlari ko'pincha xato qiladi.
+
+// Sizning vazifangiz raqamlashtirilgan matndagi xatolarni tuzatishdir. Siz faqat quyidagi xatolar bilan shug'ullanishingiz kerak:
+
+// S sifatida noto'g'ri talqin qilinadi 5
+// Osifatida noto'g'ri talqin qilinadi 0
+// Isifatida noto'g'ri talqin qilinadi 1
+// Sinov holatlarida faqat noto'g'ri raqamlar mavjud.
+
+// OUTPUT:
+// correct("L0ND0N"),"LONDON");
+// correct("DUBL1N"),"DUBLIN");
+// correct("51NGAP0RE"),"SINGAPORE");
+// correct("BUDAPE5T"),"BUDAPEST");
+// correct("PAR15"),"PARIS");
+
+// Yechim:
+
+function correct(string)
+{
+	return string.replace(/0/gi, 'O').replace(/5/gi, 'S').replace(/1/gi, "I")
+}
+console.log(correct());
+
+// YECHIM:
+function strCount(str, letter){  
+  return str.split(letter).length - 1
+}
+//console.log(strCount('hellol', 'l')); 
 //===================================== CODEWARS KATA =======================================//
 //========================================= 7 KYU ===========================================//
 
@@ -479,3 +546,59 @@ function feast(beast, dish) {
     return beast[0] === dish[0] && beast.slice(-1) === dish.slice(-1);
 }
 //console.log("great blue heron", "garlic naan");
+
+// 4 - KATA:
+// Sizning jamoangiz ajoyib yangi matn muharriri yozmoqda va sizga satrlarni raqamlashni amalga oshirish vazifasi yuklangan.
+
+// Satrlar ro'yxatini oladigan va har bir qatorni to'g'ri raqam bilan qaytaradigan funktsiyani yozing.
+
+// Raqamlash 1 dan boshlanadi. Format n: string. Yo'g'on ichak va ularning orasidagi bo'shliqqa e'tibor bering.
+
+// OUTPUT:
+
+// [] --> []
+// ["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
+
+// YECHIM:
+var number = function(array) {
+  return array.map(function (value, index) {
+    return `${index + 1}: ${value}`
+  });
+}
+
+// 5 - KATA: 
+// Musbat butun sonning bo'luvchilar sonini hisoblang .
+
+
+// Output:
+// 4 --> 3 (1, 2, 4);
+// 5 --> 2 (1, 5);
+// 12 --> 6 (1, 2, 3, 4, 6, 12);
+// 30 --> 8 (1, 2, 3, 5, 6, 10, 15, 30);
+
+function getDivisorsCnt(n) {
+  let d = 0;
+  for (let i = n; i > 0; i--) {
+    if (n % i == 0) d++;
+  }
+  return d;
+}
+//console.log(getDivisorsCnt(10));
+
+//===================================== CODEWARS KATA =======================================//
+//========================================= 6 KYU ===========================================//
+
+// 1 - KATA:
+// Asosiy g'oya qatordagi barcha uchraydigan belgilarni sanashdir. Agar sizda kabi satr "abc" bo'lsa , unda natija bo'lishi kerak {'a': 2, 'b': 1}.
+// Agar satr bo'sh bo'lsa-chi? Keyin natija bo'sh ob'ekt literal bo'lishi kerak {}.
+
+// YECHIM:
+function count (string) {  
+  var count = {};
+  string.split('').map((s) => {
+     count[s] ? count[s]++ : count[s] = 1;
+  });
+  return count;
+}
+//console.log(count(''));
+

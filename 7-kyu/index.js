@@ -1,3 +1,5 @@
+//===================================== CODEWARS KATA =====================================//
+
 // 1 - KATA - 7kyu:
 // Satr parametrini qabul qiluvchi va satrdagi har bir so‘zni teskari aylantiruvchi funksiyani bajaring. Satrdagi barcha bo'shliqlar saqlanishi kerak.
 

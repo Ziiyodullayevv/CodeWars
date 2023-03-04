@@ -1,3 +1,5 @@
+//===================================== CODEWARS KATA =====================================//
+
 // 1 - KATA - 6 kyu:
 // Asosiy g'oya qatordagi barcha uchraydigan belgilarni sanashdir. Agar sizda kabi satr "abc" bo'lsa , unda natija bo'lishi kerak {'a': 2, 'b': 1}.
 // Agar satr bo'sh bo'lsa-chi? Keyin natija bo'sh ob'ekt literal bo'lishi kerak {}.

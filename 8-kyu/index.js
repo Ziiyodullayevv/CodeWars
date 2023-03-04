@@ -573,3 +573,7 @@ function reverse(string) {
   return string.split(" ").reverse().join(" ");
 }
 // console.log(reverse("Hello world"));
+
+//--------------------------------------------------------------------------------------------
+
+// 26 - KATA:

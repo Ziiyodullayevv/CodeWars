@@ -553,7 +553,7 @@ function repeatStr(n, s) {
 // Yechim:
 
 function correct(string) {
-  return string.replace(/0/gi, "O").replace(/5/gi, "S").replace(/1/gi, "I");
+  //   return string.replace(/0/gi, "O").replace(/5/gi, "S").replace(/1/gi, "I");
 }
 console.log(correct());
 
@@ -678,3 +678,14 @@ function count(string) {
   return count;
 }
 //console.log(count(''));
+
+// --------------------------------------------------------------------------------------------
+
+// 30 - KATA: 8kyu
+// Matn berilgan shu matnni sozlarini teskari qilib yozib bering?
+// OUTPUT:
+// "Hello world" --> "world Hello"
+function reverse(string) {
+  return string.split(" ").reverse().join(" ");
+}
+console.log(reverse("Hello world"));

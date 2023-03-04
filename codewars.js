@@ -688,4 +688,7 @@ function count(string) {
 function reverse(string) {
   return string.split(" ").reverse().join(" ");
 }
-console.log(reverse("Hello world"));
+// console.log(reverse("Hello world"));
+
+// 31 - KATA: 8kyu
+//

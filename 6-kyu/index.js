@@ -12,4 +12,6 @@ function count(string) {
   });
   return count;
 }
-//console.log(count(''));
+// console.log(count("helllo"));
+
+console.log(toAlternatingCase("to Upper"));

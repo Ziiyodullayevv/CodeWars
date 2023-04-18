@@ -30,7 +30,7 @@ function points(games) {
         return output + value;
     }, 0);
 }
-  // console.log(points(['4:2','5:3']));
+console.log(points(['4:2', '5:3']));
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

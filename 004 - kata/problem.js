@@ -10,19 +10,6 @@
 
 // YECHIM:
 
-// 1 - USUL:
-function invert(array) {
-    let arrInvert = [];
-    for (let i = 0; i < array.length; i++) {
-        arrInvert.push(-array[i]);
-    }
-    return arrInvert;
-}
-
-//console.log(invert([1,-2,3]));
-
-// 2 - USUL: (optimal yechim);
-
 function invert(array) {
     return array.map((value) => -value);
 }

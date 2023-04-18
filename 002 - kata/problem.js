@@ -19,18 +19,3 @@ function areYouPlayingBanjo(name) {
 // console.log(areYouPlayingBanjo('Anna'));
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-// 2 - USUL (optimal yechim)
-
-function areYouPlayingBanjo(name) {
-    return (
-        name +
-        (name[0].toLowerCase() == "r" ? " plays" : " does not play") +
-        " banjo"
-    );
-}
-  // console.log(areYouPlayingBanjo('Anna'));
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-

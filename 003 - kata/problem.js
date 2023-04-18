@@ -12,6 +12,6 @@ function makeNegative(num) {
     else return -Math.abs(num);
 }
 
-//console.log(makeNegative(8));
+console.log(makeNegative(8));
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

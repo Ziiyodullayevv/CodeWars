@@ -10,7 +10,7 @@
 // XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
 // XO("zzoo") => false
 
-// Yechim:
+// Yechim: (1 - usul);
 
 const XO = str => {
   str = str.toLowerCase ().split ('');
@@ -18,6 +18,15 @@ const XO = str => {
     str.filter (x => x === 'x').length === str.filter (x => x === 'o').length
   );
 };
-console.log (XO ('xxxmm'));
+
+// Yechim: (2 - usul);
+
+function XO (str) {
+  return (
+    str.toLowerCase ().split ('x').length ===
+    str.toLowerCase ().split ('o').length
+  );
+}
+// console.log (XO ('xxxmm'));
 
 // _______________________________________________________
